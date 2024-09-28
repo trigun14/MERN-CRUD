@@ -8,7 +8,7 @@ function CrudList() {
 	useEffect(function () {
 		async function getAllCruds() {
 			try {
-				const response = await axios.get("http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds");
+				const response = await axios.get("http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds/");
 				setCruds(response.data);
 			} catch (error) {
 				console.log("error", error);

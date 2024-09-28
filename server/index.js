@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 // routes
-app.use("http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds", crudRoutes);
+app.use("http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds/", crudRoutes);
 //app.use("/api/auth", authRoute);
 
 // listening on port

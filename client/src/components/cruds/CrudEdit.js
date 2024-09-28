@@ -20,7 +20,7 @@ function CrudEdit(props) {
 		function () {
 			async function updateCrud() {
 				try {
-					const response = await get(`http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds${_id}`);
+					const response = await get(`http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds/${_id}`);
 					setCrud(response.data);
 				} catch (error) {
 					console.log(error);
@@ -36,7 +36,7 @@ function CrudEdit(props) {
 		event.preventDefault();
 		async function updateCrud() {
 			try {
-				await patch(`http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds${crud._id}`, crud);
+				await patch(`http://MyALB-681586485.us-east-1.elb.amazonaws.com/api/cruds/${crud._id}`, crud);
 				navigate(`/cruds/${crud._id}`);
 			} catch (error) {
 				console.log(error);
